@@ -6,7 +6,7 @@ function rotate(nums: number[], k: number): void {
         const cuttedNum = nums.splice(nums.length - 1, 1)
         nums.unshift(...cuttedNum)
     }
-};
+}
 
 // rotate([1,2,3,4,5,6,7], 3)
 rotate([1,2], 5)

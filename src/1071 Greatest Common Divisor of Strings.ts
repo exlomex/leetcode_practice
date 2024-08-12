@@ -12,9 +12,9 @@ function gcdOfStrings(str1: string, str2: string): string {
                     gcd = strSlice
                 }
             }
-        };
+        }
     }
     return gcd
-};
+}
 
 console.log(gcdOfStrings("ABABAB", "ABAB"));

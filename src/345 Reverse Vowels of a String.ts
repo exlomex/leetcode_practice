@@ -18,6 +18,6 @@ function reverseVowels(s: string): string {
         right--
     }
     return stringArr.join('')
-};
+}
 
 console.log(reverseVowels("hello"));
