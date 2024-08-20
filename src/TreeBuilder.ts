@@ -36,3 +36,26 @@ export function buildTree(arr: (number | null)[]): TreeNode | null {
 
     return root;
 }
+
+export function buildBST(arr: number[]): TreeNode {
+    if (!arr.length) return new TreeNode()
+    const root = new TreeNode(arr[0])
+    if (arr.length < 2) return root;
+
+    const insertIntoBST = (root: TreeNode | null, val: number) => {
+        if (root === null) return new TreeNode(val)
+
+        if (val < root.val) {
+            root.left =  insertIntoBST(root.left, val)
+        } else {
+            root.right =  insertIntoBST(root.right, val)
+        }
+        return root
+    }
+
+    for (let i = 1; i < arr.length; i++) {
+        insertIntoBST(root, arr[i])
+    }
+
+    return root;
+}
